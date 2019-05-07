@@ -15,7 +15,7 @@ class Login_model extends CI_Model
  
     public function validate_user($data) {
         $this->db->where('username', $data['username']);
-        $this->db->where('password', md5($data['password']));
+        $this->db->where('password', $data['password']);
         return $this->db->get('users')->row();
     }
  
