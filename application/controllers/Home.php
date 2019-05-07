@@ -1,5 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+ 
+/**
+ * @name Home.php
+ * @author Imron Rosdiana
+ */
 class Home extends CI_Controller
 {
  
