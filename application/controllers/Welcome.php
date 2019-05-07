@@ -20,6 +20,29 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('myaccount');
+		$this->load->view('login');
 	}
+    public function home(){
+        $this->load->view('homepage');
+    }
+    public function login(){
+    	$this->load->view('login');
+    }
+
+    public function album(){
+    	$this->load->view('album');
+    }
+
+    public function detailalbum(){
+    	$this->load->view('detailalbum');
+    }
+
+    public function contact(){
+    	$this->load->view('contact');
+    }
+
+    public function keluar() {
+        $this->load->view('login');
+    }
+
 }
