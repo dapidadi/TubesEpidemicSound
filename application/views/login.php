@@ -40,7 +40,7 @@
       <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
       <input type="submit" class="fadeIn fourth" value="Log In">
-      <p>Don't have an account yet?</p> <a style="color: skyblue" href="<?= site_url('login/signup') ?>"> Sign up here</a>
+      <p>Don't have an account yet?</p> <a style="color: skyblue" href="<?= site_url('signupp') ?>"> Sign up here</a>
     </form>
 
     <!-- Remind Passowrd -->

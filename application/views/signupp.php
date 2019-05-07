@@ -10,18 +10,13 @@
   $selectedBg = "$bg[$i]";
 ?>
 <body style="background: url(assets/img/<?php echo $selectedBg; ?>) no-repeat; background-size: cover; width: 100%; height: 100%;">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.min.css') ?>">
-        <div class="background_signup">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <div class="background_signup">
         <div class="block_signup">
             <div class="span12 center-text" style="text-align: center;">
-                <a href="<?php echo site_url('welcome/index') ?>">
-                    <img src="<?php echo base_url('assets/img/logo.png') ?>">
+                <a href="application/views/login.php">
+                    <img src="assets/img/logo.png">
                 </a>
             </div>
             <div class="form_signup">
@@ -29,9 +24,9 @@
                     Sign Up
                 </h4>
                 <div class="blockform_signup">
-                    <form  method="post" class="form_horizontal" action="<?php echo site_url().'/Signupp/register';?>">
-                        <input class="full-width-input" name="nama" type="text" id="nama" placeholder="First Name" autocomplete="off">
-                        <input class="full-width-input" name="username" type="text" id="username" placeholder="Username" autocomplete="off">
+                    <form id="signup_form" class="form_horizontal">
+                        <input class="full-width-input" name="first_name" type="text" id="inputFirstname" placeholder="First Name" autocomplete="off">
+                        <input class="full-width-input" name="last_name" type="text" id="inputLastname" placeholder="Last Name" autocomplete="off">
                         <input class="full-width-input" name="company" type="text" id="inputCompanyName" placeholder="Company Name" autocomplete="off">
                         <br><br>
                         <select class="business-type-select" name="business_type" id="selectBusiness">
@@ -52,8 +47,8 @@
                             <option value="Other">Other</option>
                         </select>
                         <br><br>
-                        <input name="email" type="text" id="email" class="error-ok full-width-input" placeholder="Email *" autocomplete="off">
-                        <input class="full-width-input" name="password" type="password" id="password" placeholder="Password *" autocomplete="off">
+                        <input name="email" type="text" id="inputEmail" class="error-ok full-width-input" placeholder="Email *" autocomplete="off">
+                        <input class="full-width-input" name="password" type="password" id="inputPassword" placeholder="Password *" autocomplete="off">
                         <div id="license-text-div"></div>
                         <label class="checkbox" for="endUserAgreementSigned">
                             <input id="generalTnCPrivacyPolicySigned" class="agreement-checkbox" type="checkbox" name="generalTnCPrivacyPolicySigned" value="agreed">
@@ -63,7 +58,7 @@
                             <input id="ageAssuranceSigned" class="agreement-checkbox" type="checkbox" name="ageAssuranceSigned" value="agreed">
                              I hereby certify that I am over the age of 16 years old.
                         </label>
-                        <button id="signup-btn" name="btnsubmit" class="blue-button" type="submit"><span class="loading-indicator">Sign Up</span></button>
+                        <button id="signup-btn" class="blue-button" type="submit"><span class="loading-indicator">Sign Up</span></button>
                     </form>
                 </div>
             </div>

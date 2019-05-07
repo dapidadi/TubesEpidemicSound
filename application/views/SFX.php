@@ -27,7 +27,7 @@
 
 <nav class="navbar fixed-top navbar-light warnanavbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<?php echo base_url('index.php/home') ?>">
           <img src="<?php echo base_url('assets/img/logored.png') ?>">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +35,12 @@
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Browse</a>
+        <li>
+          <a class="nav-link" href="<?php echo site_url('welcome/browse') ?>">Browse
+              </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Album</a>
+          <a class="nav-link" href="<?php echo site_url('welcome/album') ?>">Album</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo site_url('sfx2') ?>">SFX</a>
@@ -55,9 +56,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">My Account</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/myaccount') ?>">My Account</a>
             <a class="dropdown-item" href="#">My Music</a>
-            <a class="dropdown-item" href="#">Log Out</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/logout') ?>">Log Out</a>
           </div>
       </ul>
     </div>
@@ -180,7 +181,7 @@
       <li>Newsletter</li>
       <li>Careers</li>
       <li>Press</li>
-      <li>Contact</li>
+      <li><a href="<?php echo base_url('welcome/contact'); ?>">Contact </a> </li>
     </ul>
     </div>
     <div class="col">

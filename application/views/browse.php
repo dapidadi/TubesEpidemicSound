@@ -2,48 +2,51 @@
 <html>
 <head>
 	<title>Epidemic Sound</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.min.css') ?>">
   
 </head>
 <body>
 
 <style>
-.colornav
-{
-  background-color: rgb(241,241,241);
-}
+    .dot{
+      height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+    }
 
-#tab{
-  width: 100px;
-}
-</style>
+    .warnanavbar{
+      background-color: #d3d3d3;
+    }
 
+  </style>
 <!-- Navigation Bar -->
-<nav class="navbar fixed-top colornav navbar-expand-lg navbar-light">
+
+<nav class="navbar fixed-top navbar-light warnanavbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">
-          <img src="assets/img/logored.png">
+    <a class="navbar-brand" href="<?php echo base_url('index.php/home') ?>">
+          <img src="<?php echo base_url('assets/img/logored.png') ?>">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Browse
+        <li>
+          <a class="nav-link" href="<?php echo site_url('welcome/browse') ?>">Browse
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Album</a>
+          <a class="nav-link" href="<?php echo site_url('welcome/album') ?>">Album</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SFX</a>
+          <a class="nav-link" href="<?php echo site_url('sfx2') ?>">SFX</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Latest</a>
@@ -56,16 +59,16 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">My Account</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/myaccount') ?>">My Account</a>
             <a class="dropdown-item" href="#">My Music</a>
-            <a class="dropdown-item" href="#">Log Out</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/logout') ?>">Log Out</a>
           </div>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- END OF Navigation Bar -->	
+<!-- END OF Navigation Bar -->
 
 
 
@@ -219,9 +222,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
+
 </body>
 	
 

@@ -2,43 +2,45 @@
 <html>
 <head>
 	<title> Epidemic</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-grid.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-reboot.min.css') ?>">
 
 </head> 
 <body>
 <style>
 
-.colornav
+.warnanavbar
 {
-	background-color: rgb(241,241,241);
+	background-color: #d3d3d3;
 }
 </style>
 
 
 <!-- Navigation Bar -->
-<nav class="navbar fixed-top colornav navbar-expand-lg navbar-light  ">
+
+<nav class="navbar fixed-top navbar-light warnanavbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">
-          <img src="assets/img/logored.png">
+    <a class="navbar-brand" href="<?php echo base_url('index.php/home') ?>">
+          <img src="<?php echo base_url('assets/img/logored.png') ?>">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Browse</a>
+        <li>
+          <a class="nav-link" href="<?php echo site_url('welcome/browse') ?>">Browse
+              </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Album</a>
+          <a class="nav-link" href="<?php echo site_url('welcome/album') ?>">Album</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SFX</a>
+          <a class="nav-link" href="<?php echo site_url('sfx2') ?>">SFX</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Latest</a>
@@ -51,9 +53,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">My Account</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/myaccount') ?>">My Account</a>
             <a class="dropdown-item" href="#">My Music</a>
-            <a class="dropdown-item" href="#">Log Out</a>
+            <a class="dropdown-item" href="<?php echo site_url('welcome/logout') ?>">Log Out</a>
           </div>
       </ul>
     </div>
@@ -61,10 +63,12 @@
 </nav>
 
 <!-- END OF Navigation Bar -->
+
+
 <div class = "container" style="text-align:left;">
 
 <div class="row"style="padding-top: 150px;">
-    <div class="col-sm-9" style="background-color:yellow;">
+    <div class="col-sm-9" >
       <h1><b>CONTACT</b></h1>
       <p>
       	<b>Help & Support</b><br>
@@ -190,6 +194,8 @@
     
   </div>
 </div>
+
+
 <!-- FOOTER -->
 
 <section style="background-color: black">
@@ -198,7 +204,7 @@
     <div class="row">
     <div class="col">
     <ul style="list-style: none;">
-      <li><img src="assets/img/logo.png"></li>
+      <li><img src="<?php echo base_url('assets/img/logo.png') ?>"></li>
     </ul>
     </div>
     <div class="col">
@@ -214,7 +220,7 @@
       <li>Newsletter</li>
       <li>Careers</li>
       <li>Press</li>
-      <li>Contact</li>
+      <li><a href="<?php echo site_url('welcome/contact') ?>">Contact </a></li>
     </ul>
     </div>
     <div class="col">
@@ -229,6 +235,7 @@
     </div>
   </div>
 </section>
+
 
 <section style="background-color: black">
   <br>
@@ -252,6 +259,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- == JS FILE == -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
