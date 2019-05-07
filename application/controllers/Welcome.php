@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('halamanawal');
 	}
     public function home(){
         $this->load->view('homepage');
@@ -41,8 +41,17 @@ class Welcome extends CI_Controller {
     	$this->load->view('contact');
     }
 
-    public function keluar() {
-        $this->load->view('login');
+    public function myaccount(){
+    	$this->load->view('myaccount');
+    }
+
+    public function logout(){
+    $this->session->sess_destroy();
+    redirect('');    
+    }
+
+    public function browse(){
+    	$this->load->view('browse');
     }
 
 }

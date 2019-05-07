@@ -22,3 +22,4 @@ class sfx2 extends CI_Controller
         $this->load->view('SFX', $data);
     }
 }
+?>
